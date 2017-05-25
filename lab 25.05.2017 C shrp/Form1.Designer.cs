@@ -28,58 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.adress = new System.Windows.Forms.TextBox();
+            this.moj_port = new System.Windows.Forms.NumericUpDown();
+            this.polacz = new System.Windows.Forms.Button();
+            this.info_feed = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.moj_port)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // adress
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 22);
-            this.textBox1.TabIndex = 0;
+            this.adress.Location = new System.Drawing.Point(12, 12);
+            this.adress.Name = "adress";
+            this.adress.Size = new System.Drawing.Size(334, 22);
+            this.adress.TabIndex = 0;
+            this.adress.Text = "Adres";
+            this.adress.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // numericUpDown1
+            // moj_port
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(364, 12);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(340, 22);
-            this.numericUpDown1.TabIndex = 1;
+            this.moj_port.Location = new System.Drawing.Point(364, 12);
+            this.moj_port.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.moj_port.Name = "moj_port";
+            this.moj_port.Size = new System.Drawing.Size(340, 22);
+            this.moj_port.TabIndex = 1;
+            this.moj_port.ValueChanged += new System.EventHandler(this.moj_port_ValueChanged);
             // 
-            // button1
+            // polacz
             // 
-            this.button1.Location = new System.Drawing.Point(228, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 72);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.polacz.Location = new System.Drawing.Point(228, 446);
+            this.polacz.Name = "polacz";
+            this.polacz.Size = new System.Drawing.Size(254, 72);
+            this.polacz.TabIndex = 2;
+            this.polacz.Text = "button1";
+            this.polacz.UseVisualStyleBackColor = true;
+            this.polacz.Click += new System.EventHandler(this.polacz_Click);
             // 
-            // listBox1
+            // info_feed
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 52);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(692, 388);
-            this.listBox1.TabIndex = 3;
+            this.info_feed.FormattingEnabled = true;
+            this.info_feed.ItemHeight = 16;
+            this.info_feed.Location = new System.Drawing.Point(12, 52);
+            this.info_feed.Name = "info_feed";
+            this.info_feed.Size = new System.Drawing.Size(692, 388);
+            this.info_feed.TabIndex = 3;
+            this.info_feed.SelectedIndexChanged += new System.EventHandler(this.info_feed_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 530);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.info_feed);
+            this.Controls.Add(this.polacz);
+            this.Controls.Add(this.moj_port);
+            this.Controls.Add(this.adress);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moj_port)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,10 +97,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox adress;
+        private System.Windows.Forms.NumericUpDown moj_port;
+        private System.Windows.Forms.Button polacz;
+        private System.Windows.Forms.ListBox info_feed;
     }
 }
 
